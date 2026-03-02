@@ -21,7 +21,7 @@ export const clearSlipGaji = () => ({
 export const fetchSlipGajiByYear = (selectedYear, onDataFound) => async (dispatch) => {
     try {
         const response = await axios.get(
-            `http://localhost:5000/laporan/slip_gaji/year/${selectedYear}`
+            `/laporan/slip_gaji/year/${selectedYear}`
         );
         const data = response.data;
         dispatch(fetchSlipGajiSuccess(data));
@@ -36,7 +36,7 @@ export const fetchSlipGajiByYear = (selectedYear, onDataFound) => async (dispatc
 export const fetchSlipGajiByMonth = (selectedMonth, onDataFound) => async (dispatch) => {
     try {
         const response = await axios.get(
-            `http://localhost:5000/laporan/slip_gaji/month/${selectedMonth}`
+            `/laporan/slip_gaji/month/${selectedMonth}`
         );
         const data = response.data;
         dispatch(fetchSlipGajiSuccess(data));
@@ -51,7 +51,7 @@ export const fetchSlipGajiByMonth = (selectedMonth, onDataFound) => async (dispa
 export const fetchSlipGajiByName = (selectedName, onDataFound) => async (dispatch) => {
     try {
         const response = await axios.get(
-            `http://localhost:5000/laporan/slip_gaji/name/${selectedName}`
+            `/laporan/slip_gaji/name/${selectedName}`
         );
         const data = response.data;
         dispatch(fetchSlipGajiSuccess(data));

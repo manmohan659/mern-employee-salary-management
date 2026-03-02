@@ -118,7 +118,7 @@ const DataGajiPegawai = () => {
   useEffect(() => {
     const getDataPegawai = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/data_gaji/name/${nama_pegawai}`);
+        const response = await axios.get(`/data_gaji/name/${nama_pegawai}`);
         const data = response.data;
 
         setDataGajiPegawai(data);

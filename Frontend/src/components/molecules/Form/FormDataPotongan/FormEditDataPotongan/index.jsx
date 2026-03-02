@@ -25,7 +25,7 @@ const FormEditDataPotongan = () => {
             formData.append('potongan', potongan);
             formData.append('jml_potongan', jmlPotongan);
 
-            const response = await axios.patch(`http://localhost:5000/data_potongan/update/${id}`, formData, {
+            const response = await axios.patch(`/data_potongan/update/${id}`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
@@ -51,7 +51,7 @@ const FormEditDataPotongan = () => {
     useEffect(() => {
         const getDataById = async () => {
             try {
-                const response = await axios.get(`http://localhost:5000/data_potongan/${id}`);
+                const response = await axios.get(`/data_potongan/${id}`);
                 setPotongan(response.data.potongan);
                 setJmlPotongan(response.data.jml_potongan);
             } catch (error) {

@@ -30,13 +30,13 @@ const FormAddDataKehadiran = () => {
     );
 
     const getDataPegawai = async () => {
-        const response = await axios.get("http://localhost:5000/data_pegawai");
+        const response = await axios.get("/data_pegawai");
         setDataPegawai(response.data);
     };
 
     const getDataKehadiran = async () => {
         try {
-            const response = await axios.get("http://localhost:5000/data_kehadiran");
+            const response = await axios.get("/data_kehadiran");
             setDataKehadiran(response.data);
         } catch (error) {
             console.error("Error fetching data:", error);
@@ -92,7 +92,7 @@ const FormAddDataKehadiran = () => {
                 );
 
                 if (!isNamaAda) {
-                    await axios.post("http://localhost:5000/data_kehadiran", {
+                    await axios.post("/data_kehadiran", {
                         nik: dataPegawai[i].nik,
                         nama_pegawai: dataPegawai[i].nama_pegawai,
                         nama_jabatan: dataPegawai[i].jabatan,

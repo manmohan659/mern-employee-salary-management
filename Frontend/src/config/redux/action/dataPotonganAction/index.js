@@ -10,7 +10,7 @@ import {
     DELETE_DATA_POTONGAN_FAILURE
 } from './dataPotonganActionTypes';
 
-const API_URL = 'http://localhost:5000';
+const API_URL = '';
 
 export const getDataPotongan = () => {
     return async (dispatch) => {

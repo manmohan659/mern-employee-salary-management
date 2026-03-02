@@ -12,7 +12,7 @@ const DefaultDashboard = () => {
         const getDataPegawai = async () => {
             try {
                 const response = await axios.get(
-                    `http://localhost:5000/data_pegawai/name/${user.nama_pegawai}`
+                    `/data_pegawai/name/${user.nama_pegawai}`
                 );
                 const data = response.data;
                 setDataPegawai(data);
@@ -64,7 +64,7 @@ const DefaultDashboard = () => {
                         <div className="md:w-1/3 w-full px-4 py-4 flex justify-center md:justify-start">
                             <img
                                 className="rounded-xl h-80 w-full md:w-80 object-cover"
-                                src={`http://localhost:5000/images/${dataPegawai.photo}`}
+                                src={`/images/${dataPegawai.photo}`}
                                 alt="People"
                             />
                         </div>

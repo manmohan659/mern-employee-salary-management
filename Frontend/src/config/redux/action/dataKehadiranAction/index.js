@@ -13,7 +13,7 @@ import {
 export const getDataKehadiran = () => {
     return async (dispatch) => {
         try {
-            const response = await axios.get('http://localhost:5000/data_kehadiran');
+            const response = await axios.get('/data_kehadiran');
             const dataKehadiran = response.data;
             dispatch({
                 type: GET_DATA_KEHADIRAN_SUCCESS,
@@ -36,7 +36,7 @@ export const createDataKehadiran = (dataPegawai, dataKehadiran, navigate) => asy
             );
 
             if (!isNamaAda) {
-                const response = await axios.post("http://localhost:5000/data_kehadiran", {
+                const response = await axios.post("/data_kehadiran", {
                     nik: dataPegawai[i].nik,
                     nama_pegawai: dataPegawai[i].nama_pegawai,
                     nama_jabatan: dataPegawai[i].jabatan,
@@ -67,7 +67,7 @@ export const createDataKehadiran = (dataPegawai, dataKehadiran, navigate) => asy
 export const updateDataKehadiran = (id, dataKehadiran) => {
     return async (dispatch) => {
         try {
-            const response = await axios.put(`http://localhost:5000/data_kehadiran/${id}`, dataKehadiran);
+            const response = await axios.put(`/data_kehadiran/${id}`, dataKehadiran);
             if (response.status === 200) {
                 dispatch({
                     type: UPDATE_DATA_KEHADIRAN_SUCCESS,
@@ -92,7 +92,7 @@ export const updateDataKehadiran = (id, dataKehadiran) => {
 export const deleteDataKehadiran = (id) => {
     return async (dispatch) => {
         try {
-            const response = await axios.delete(`http://localhost:5000/data_kehadiran/${id}`);
+            const response = await axios.delete(`/data_kehadiran/${id}`);
             if (response.status === 200) {
                 dispatch({
                     type: DELETE_DATA_KEHADIRAN_SUCCESS,

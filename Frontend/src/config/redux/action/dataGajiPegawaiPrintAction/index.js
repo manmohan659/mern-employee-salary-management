@@ -17,7 +17,7 @@ export const viewDataGajiSinglePegawaiFailure = (error) => ({
 export const viewGajiSinglePegawaiByYear = (dataYear) => async (dispatch) => {
     try {
         const response = await axios.get(
-            `http://localhost:5000/data_gaji/month/${dataYear}`
+            `/data_gaji/month/${dataYear}`
         );
         const data = response.data;
         dispatch(viewDataGajiSinglePegawaiSuccess(data));
@@ -31,7 +31,7 @@ export const viewGajiSinglePegawaiByYear = (dataYear) => async (dispatch) => {
 export const viewGajiSinglePegawaiByMonth = (dataMonth) => async (dispatch) => {
     try {
         const response = await axios.get(
-            `http://localhost:5000/data_gaji/month/${dataMonth}`
+            `/data_gaji/month/${dataMonth}`
         );
         const data = response.data;
         dispatch(viewDataGajiSinglePegawaiSuccess(data));
@@ -45,7 +45,7 @@ export const viewGajiSinglePegawaiByMonth = (dataMonth) => async (dispatch) => {
 export const viewGajiSinglePegawaiByName = (nama_pegawai) => async (dispatch) => {
     try {
         const response = await axios.get(
-            `http://localhost:5000/data_gaji/name/${nama_pegawai}`
+            `/data_gaji/name/${nama_pegawai}`
         );
         const data = response.data;
         dispatch(viewDataGajiSinglePegawaiSuccess(data));

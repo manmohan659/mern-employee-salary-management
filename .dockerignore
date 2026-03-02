@@ -1,0 +1,11 @@
+node_modules
+.git
+.github
+*.md
+.env
+.env.*
+!.env.example
+Backend/node_modules
+Frontend/node_modules
+Backend/__tests__
+Backend/request_test

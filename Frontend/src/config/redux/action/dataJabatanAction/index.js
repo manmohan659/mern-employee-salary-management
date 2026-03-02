@@ -10,7 +10,7 @@ import {
     DELETE_DATA_JABATAN_FAILURE
 } from './dataJabatanActionTypes';
 
-const API_URL = 'http://localhost:5000';
+const API_URL = '';
 
 export const getDataJabatan = () => {
     return async (dispatch) => {

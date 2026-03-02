@@ -21,7 +21,7 @@ export const clearLaporanGaji = () => ({
 export const fetchLaporanGajiByYear = (selectedYear, onDataFound) => async (dispatch) => {
     try {
         const response = await axios.get(
-            `http://localhost:5000/laporan/gaji/year/${selectedYear}`
+            `/laporan/gaji/year/${selectedYear}`
         );
         const data = response.data;
         dispatch(fetchLaporanGajiSuccess(data));
@@ -36,7 +36,7 @@ export const fetchLaporanGajiByYear = (selectedYear, onDataFound) => async (disp
 export const fetchLaporanGajiByMonth = (selectedMonth, onDataFound) => async (dispatch) => {
     try {
         const response = await axios.get(
-            `http://localhost:5000/laporan/gaji/month/${selectedMonth}`
+            `/laporan/gaji/month/${selectedMonth}`
         );
         const data = response.data;
         dispatch(fetchLaporanGajiSuccess(data));

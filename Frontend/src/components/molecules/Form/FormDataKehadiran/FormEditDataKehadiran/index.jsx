@@ -24,7 +24,7 @@ const FormEditDataKehadiran = () => {
     useEffect(() => {
         const getUserById = async () => {
             try {
-                const response = await axios.get(`http://localhost:5000/data_kehadiran/${id}`);
+                const response = await axios.get(`/data_kehadiran/${id}`);
                 setNamaPegawai(response.data.nama_pegawai);
                 setNik(response.data.nik);
                 setNamaJabatan(response.data.nama_jabatan);
@@ -51,7 +51,7 @@ const FormEditDataKehadiran = () => {
             formData.append('sakit', sakit);
             formData.append('alpha', alpha);
 
-            const response = await axios.patch(`http://localhost:5000/data_kehadiran/update/${id}`, formData, {
+            const response = await axios.patch(`/data_kehadiran/update/${id}`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
