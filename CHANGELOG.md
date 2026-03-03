@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/manmohan659/mern-employee-salary-management/compare/v1.0.1...v1.0.2) (2026-03-03)
+
+
+### Bug Fixes
+
+* rename Assets to assets for case-sensitive Linux CI ([2ff6b9a](https://github.com/manmohan659/mern-employee-salary-management/commit/2ff6b9a87db65256c5a0e618b00ef2cced20e5ec))
+
 ## [1.0.1](https://github.com/manmohan659/mern-employee-salary-management/compare/v1.0.0...v1.0.1) (2026-03-03)
 
 
