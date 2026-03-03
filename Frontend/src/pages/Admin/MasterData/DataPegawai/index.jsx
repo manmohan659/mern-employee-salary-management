@@ -146,7 +146,7 @@ const DataPegawai = () => {
 
     return (
         <Layout>
-            <Breadcrumb pageName="Data Pegawai" />
+            <Breadcrumb pageName="Employee Data" />
             <Link to="/data-pegawai/form-data-pegawai/add">
                 <ButtonOne>
                     <span>Tambah Pegawai</span>
@@ -258,7 +258,7 @@ const DataPegawai = () => {
                 <div className="flex justify-between items-center mt-4 flex-col md:flex-row md:justify-between">
                     <div className="flex items-center space-x-2">
                         <span className="text-gray-5 dark:text-gray-4 text-sm py-4">
-                            Menampilkan {startIndex + 1}-{Math.min(endIndex, filteredDataPegawai.length)} dari {filteredDataPegawai.length} Data Pegawai
+                            Menampilkan {startIndex + 1}-{Math.min(endIndex, filteredDataPegawai.length)} dari {filteredDataPegawai.length} Employee Data
                         </span>
                     </div>
                     <div className="flex space-x-2 py-4">

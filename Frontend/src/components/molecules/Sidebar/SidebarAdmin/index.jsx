@@ -28,20 +28,20 @@ const SidebarAdmin = ({ sidebarOpen, setSidebarOpen }) => {
 
   const onLogout = () => {
     Swal.fire({
-      title: 'Konfirmasi',
-      text: 'Apakah Anda yakin ingin keluar?',
+      title: 'Confirmation',
+      text: 'Are you sure you want to log out?',
       icon: 'question',
       showCancelButton: true,
-      confirmButtonText: 'Ya',
-      cancelButtonText: 'Tidak',
+      confirmButtonText: 'Yes',
+      cancelButtonText: 'No',
       reverseButtons: true,
     }).then((result) => {
       if (result.isConfirmed) {
         dispatch(logoutUser());
         dispatch(reset())
         Swal.fire({
-          title: 'Logout Berhasil',
-          text: 'Anda telah berhasil keluar.',
+          title: 'Logout Successful',
+          text: 'You have successfully logged out.',
           icon: 'success',
           timer: 1500,
           timerProgressBar: true,
@@ -176,7 +176,7 @@ const SidebarAdmin = ({ sidebarOpen, setSidebarOpen }) => {
                                 (isActive && '!text-white')
                               }
                             >
-                              Data Pegawai
+                              Employee Data
                             </NavLink>
                           </li>
                           <li>
@@ -187,7 +187,7 @@ const SidebarAdmin = ({ sidebarOpen, setSidebarOpen }) => {
                                 (isActive && '!text-white')
                               }
                             >
-                              Data Jabatan
+                              Position Data
                             </NavLink>
                           </li>
                         </ul>
@@ -199,7 +199,7 @@ const SidebarAdmin = ({ sidebarOpen, setSidebarOpen }) => {
               </SidebarLinkGroup>
               {/* <!-- Master Data Admin --> */}
 
-              {/* <!-- Transaksi Admin --> */}
+              {/* <!-- Transactions Admin --> */}
               <SidebarLinkGroup
                 activeCondition={
                   pathname === '/transaksi' || pathname.includes('transaksi')
@@ -222,7 +222,7 @@ const SidebarAdmin = ({ sidebarOpen, setSidebarOpen }) => {
                         }}
                       >
                         <FaRegMoneyBillAlt />
-                        Transaksi
+                        Transactions
                         <MdKeyboardArrowDown className={`absolute right-4 top-1/2 -translate-y-1/2 fill-current text-2xl ${open && 'rotate-180'
                           }`} />
                       </NavLink>
@@ -240,7 +240,7 @@ const SidebarAdmin = ({ sidebarOpen, setSidebarOpen }) => {
                                 (isActive && '!text-white')
                               }
                             >
-                              Data Kehadiran
+                              Attendance Data
                             </NavLink>
                           </li>
                           <li>
@@ -251,7 +251,7 @@ const SidebarAdmin = ({ sidebarOpen, setSidebarOpen }) => {
                                 (isActive && '!text-white')
                               }
                             >
-                              Data Potongan
+                              Deduction Data
                             </NavLink>
                           </li>
                           <li>
@@ -262,7 +262,7 @@ const SidebarAdmin = ({ sidebarOpen, setSidebarOpen }) => {
                                 (isActive && '!text-white')
                               }
                             >
-                              Data Gaji
+                              Salary Data
                             </NavLink>
                           </li>
                         </ul>
@@ -272,9 +272,9 @@ const SidebarAdmin = ({ sidebarOpen, setSidebarOpen }) => {
                   )
                 }}
               </SidebarLinkGroup>
-              {/* <!-- Transaksi Admin --> */}
+              {/* <!-- Transactions Admin --> */}
 
-              {/* <!-- Laporan Admin --> */}
+              {/* <!-- Reports Admin --> */}
               <SidebarLinkGroup
                 activeCondition={
                   pathname === '/laporan' || pathname.includes('laporan')
@@ -297,7 +297,7 @@ const SidebarAdmin = ({ sidebarOpen, setSidebarOpen }) => {
                         }}
                       >
                         <TfiPrinter />
-                        Laporan
+                        Reports
                         <MdKeyboardArrowDown className={`absolute right-4 top-1/2 -translate-y-1/2 fill-current text-2xl ${open && 'rotate-180'
                           }`} />
                       </NavLink>
@@ -315,7 +315,7 @@ const SidebarAdmin = ({ sidebarOpen, setSidebarOpen }) => {
                                 (isActive && '!text-white')
                               }
                             >
-                              Laporan Gaji
+                              Salary Report
                             </NavLink>
                           </li>
                           <li>
@@ -326,7 +326,7 @@ const SidebarAdmin = ({ sidebarOpen, setSidebarOpen }) => {
                                 (isActive && '!text-white')
                               }
                             >
-                              Laporan Absensi
+                              Attendance Report
                             </NavLink>
                           </li>
                           <li>
@@ -337,7 +337,7 @@ const SidebarAdmin = ({ sidebarOpen, setSidebarOpen }) => {
                                 (isActive && '!text-white')
                               }
                             >
-                              Slip Gaji
+                              Pay Slip
                             </NavLink>
                           </li>
                         </ul>
@@ -347,9 +347,9 @@ const SidebarAdmin = ({ sidebarOpen, setSidebarOpen }) => {
                   )
                 }}
               </SidebarLinkGroup>
-              {/* <!-- Laporan Admin --> */}
+              {/* <!-- Reports Admin --> */}
 
-              {/* <!-- Pengaturan Admin --> */}
+              {/* <!-- Settings Admin --> */}
               <SidebarLinkGroup
                 activeCondition={
                   pathname === '/pengaturan' || pathname.includes('pengaturan')
@@ -372,7 +372,7 @@ const SidebarAdmin = ({ sidebarOpen, setSidebarOpen }) => {
                         }}
                       >
                         <FiSettings />
-                        Pengaturan
+                        Settings
                         <MdKeyboardArrowDown className={`absolute right-4 top-1/2 -translate-y-1/2 fill-current text-2xl ${open && 'rotate-180'
                           }`} />
                       </NavLink>
@@ -390,7 +390,7 @@ const SidebarAdmin = ({ sidebarOpen, setSidebarOpen }) => {
                                 (isActive && '!text-white')
                               }
                             >
-                              Ubah Password
+                              Change Password
                             </NavLink>
                           </li>
                           <li>
@@ -411,7 +411,7 @@ const SidebarAdmin = ({ sidebarOpen, setSidebarOpen }) => {
                   )
                 }}
               </SidebarLinkGroup>
-              {/* <!-- Pengaturan Admin --> */}
+              {/* <!-- Settings Admin --> */}
             </ul>
           </div>
         </nav>

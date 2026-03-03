@@ -150,7 +150,7 @@ const DataGajiPegawai = () => {
 
   return (
     <Layout>
-      <Breadcrumb pageName="Data Gaji" />
+      <Breadcrumb pageName="Salary Data" />
 
       <div className="mt-6 rounded-sm border border-stroke bg-white px-5 pb-2.5 pt-6 shadow-default dark:border-strokedark dark:bg-boxdark sm:px-7.5 xl:pb-1">
         <div className="max-w-full overflow-x-auto py-4">
@@ -246,7 +246,7 @@ const DataGajiPegawai = () => {
             <span className="text-gray-5 dark:text-gray-4 py-4 text-sm">
               Menampilkan {startIndex + 1}-
               {Math.min(endIndex, dataGajiPegawai.length)} dari{" "}
-              {dataGajiPegawai.length} Data Gaji
+              {dataGajiPegawai.length} Salary Data
             </span>
           </div>
           <div className="flex space-x-2 py-4">

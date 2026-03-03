@@ -17,7 +17,7 @@ app.post('/login', (req, res) => {
     if (!username || !password) {
         return res.status(400).json({ msg: 'Username and password are required' });
     }
-    res.status(200).json({ msg: 'Login Berhasil' });
+    res.status(200).json({ msg: 'Login successful' });
 });
 
 describe('Auth Endpoints', () => {
@@ -44,7 +44,7 @@ describe('Auth Endpoints', () => {
                 .post('/login')
                 .send({ username: 'admin', password: 'password123' });
             expect(res.status).toBe(200);
-            expect(res.body.msg).toBe('Login Berhasil');
+            expect(res.body.msg).toBe('Login successful');
         });
     });
 });

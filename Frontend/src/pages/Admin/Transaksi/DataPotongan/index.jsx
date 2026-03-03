@@ -142,7 +142,7 @@ const DataPotongan = () => {
 
     return (
         <Layout>
-            <Breadcrumb pageName='Data Potongan' />
+            <Breadcrumb pageName='Deduction Data' />
             <Link to="/data-potongan/form-data-potongan/add" >
                 <ButtonOne  >
                     <span>Tambah Potongan</span>
@@ -224,7 +224,7 @@ const DataPotongan = () => {
                 <div className="flex justify-between items-center mt-4 flex-col md:flex-row md:justify-between">
                     <div className="flex items-center space-x-2">
                         <span className="text-gray-5 dark:text-gray-4 text-sm py-4">
-                            Menampilkan {startIndex + 1}-{Math.min(endIndex, filteredDataPotongan.length)} dari {filteredDataPotongan.length} Data Potongan
+                            Menampilkan {startIndex + 1}-{Math.min(endIndex, filteredDataPotongan.length)} dari {filteredDataPotongan.length} Deduction Data
                         </span>
                     </div>
                     <div className="flex space-x-2 py-4">
