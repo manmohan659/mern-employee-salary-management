@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/manmohan659/mern-employee-salary-management/compare/v1.0.0...v1.0.1) (2026-03-03)
+
+
+### Bug Fixes
+
+* resolve CI failures - peer deps and release permissions ([ca28d89](https://github.com/manmohan659/mern-employee-salary-management/commit/ca28d89f89a399f34dab07a349a13d8edb9482c7))
+
 # 1.0.0 (2026-03-03)
 
 
