@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/manmohan659/mern-employee-salary-management/compare/v1.1.0...v1.1.1) (2026-03-03)
+
+
+### Bug Fixes
+
+* translate remaining Indonesian text in forms and actions ([26397a3](https://github.com/manmohan659/mern-employee-salary-management/commit/26397a34836d73d3c98c767d225926aad97271c1))
+
 # [1.1.0](https://github.com/manmohan659/mern-employee-salary-management/compare/v1.0.3...v1.1.0) (2026-03-03)
 
 
