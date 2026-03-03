@@ -28,7 +28,7 @@ const About = () => {
                         >
                             <h3 className="text-neutral text-center dark:text-white">What is SiPeKa?</h3>
                             <h1 className="text-4xl font-semibold drop-shadow-md text-center text-accent dark:text-white">
-                                Tentang <span className="text-primary">Kami</span>
+                                About <span className="text-primary">Us</span>
                             </h1>
                             <BottomLine />
                         </motion.div>
@@ -58,14 +58,14 @@ const About = () => {
                                 }}
                             >
                                 <p className="font-medium text-center translate-y-[-60%] sm:translate-y-[-0%] sm:mb-2 md:text-left dark:text-white">
-                                    SiPeKa ( Sistem Penggajian Karyawan ) adalah suatu sistem yang digunakan oleh perusahaan untuk mengelola proses penggajian karyawan secara efisien dan akurat.
-                                    Sistem ini memainkan peran kunci dalam mengotomatisasi berbagai tugas terkait penggajian, seperti perhitungan gaji, pemrosesan absensi, dan pembayaran upah karyawan.
+                                    SiPeKa (Employee Payroll System) is a system used by companies to manage employee payroll efficiently and accurately.
+                                    It plays a key role in automating payroll tasks such as salary calculation, attendance processing, and wage payments.
                                 </p>
                                 <br />
                                 <p className="font-medium text-center translate-y-[-50%] sm:translate-y-[-0%] sm:mb-2 md:text-left dark:text-white">
-                                    Dalam SiPeKa, informasi karyawan seperti data pribadi, jabatan, dan tingkat gaji disimpan secara terpusat.
-                                    Setiap bulan, sistem akan mengambil data absensi karyawan dan melakukan perhitungan gaji berdasarkan informasi yang ada.
-                                    Hal ini mencakup faktor-faktor seperti jam kerja, cuti, lembur, dan potongan yang relevan.
+                                    In SiPeKa, employee data such as personal info, position, and salary level is stored centrally.
+                                    Each month, the system retrieves attendance data and calculates salaries accordingly.
+                                    This includes factors such as working hours, leave, overtime, and deductions.
                                 </p>
                             </motion.div>
                         </div>
