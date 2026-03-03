@@ -72,14 +72,14 @@ const LaporanAbsensi = () => {
 
     return (
         <Layout>
-            <Breadcrumb pageName='Laporan Absensi Pegawai' />
+            <Breadcrumb pageName='Attendance Report Pegawai' />
 
             <div className='sm:grid-cols-2'>
                 <div className='flex flex-col gap-9'>
                     <div className='rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark'>
                         <div className='border-b border-stroke py-4 px-6.5 dark:border-strokedark'>
                             <h3 className='font-medium text-black dark:text-white'>
-                                Filter Laporan Absensi Pegawai
+                                Filter Attendance Report Pegawai
                             </h3>
                         </div>
                         <form onSubmit={handleSearch}>
@@ -141,7 +141,7 @@ const LaporanAbsensi = () => {
 
                                 <div className='flex flex-col md:flex-row w-full gap-3 text-center'>
                                     <ButtonOne type='submit'>
-                                        <span>Cetak Laporan Absensi</span>
+                                        <span>Cetak Attendance Report</span>
                                         <span>
                                             <TfiPrinter />
                                         </span>

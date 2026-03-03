@@ -72,7 +72,7 @@ const Contact = () => {
                         animate={viewDiv && "visible"}
                         variants={headingAnimation}
                     >
-                        <h3 className="text-neutral text-center dark:text-white">Kontak</h3>
+                        <h3 className="text-neutral text-center dark:text-white">Contact</h3>
                         <h1 className="text-4xl font-semibold drop-shadow-md text-center text-accent dark:text-white">
                             Hubungi <span className="text-primary">Kami</span>
                         </h1>
@@ -127,7 +127,7 @@ const Contact = () => {
                                     value="Send Message"
                                     className=""
                                 >
-                                    <span>Kirim</span>
+                                    <span>Send</span>
                                     <span><MdSend /></span>
                                 </ButtonThree>
                             </form>

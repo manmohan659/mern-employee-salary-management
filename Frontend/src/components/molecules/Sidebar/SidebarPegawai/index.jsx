@@ -27,20 +27,20 @@ const SidebarPegawai = ({ sidebarOpen, setSidebarOpen }) => {
 
   const onLogout = () => {
     Swal.fire({
-      title: 'Konfirmasi',
-      text: 'Apakah Anda yakin ingin keluar?',
+      title: 'Confirmation',
+      text: 'Are you sure you want to log out?',
       icon: 'question',
       showCancelButton: true,
-      confirmButtonText: 'Ya',
-      cancelButtonText: 'Tidak',
+      confirmButtonText: 'Yes',
+      cancelButtonText: 'No',
       reverseButtons: true,
     }).then((result) => {
       if (result.isConfirmed) {
         dispatch(logoutUser());
         dispatch(reset())
         Swal.fire({
-          title: 'Logout Berhasil',
-          text: 'Anda telah berhasil keluar.',
+          title: 'Logout Successful',
+          text: 'You have successfully logged out.',
           icon: 'success',
           timer: 1500,
           timerProgressBar: true,
@@ -133,7 +133,7 @@ const SidebarPegawai = ({ sidebarOpen, setSidebarOpen }) => {
               </NavLink>
               {/* <!-- Dashboard Pegawai --> */}
 
-              {/* <!-- Data Gaji Pegawai--> */}
+              {/* <!-- Salary Data Pegawai--> */}
               <li>
                 <NavLink
                   to='/data-gaji-pegawai'
@@ -142,12 +142,12 @@ const SidebarPegawai = ({ sidebarOpen, setSidebarOpen }) => {
                     }`}
                 >
                   <FaRegMoneyBillAlt />
-                  Data Gaji
+                  Salary Data
                 </NavLink>
               </li>
-              {/* <!-- Data Gaji Pegawai --> */}
+              {/* <!-- Salary Data Pegawai --> */}
 
-              {/* <!-- Pengaturan Pegawai --> */}
+              {/* <!-- Settings Pegawai --> */}
               <SidebarLinkGroup
                 activeCondition={
                   pathname === '/pengaturan' || pathname.includes('pengaturan')
@@ -170,7 +170,7 @@ const SidebarPegawai = ({ sidebarOpen, setSidebarOpen }) => {
                         }}
                       >
                         <FiSettings />
-                        Pengaturan
+                        Settings
                         <MdKeyboardArrowDown className={`absolute right-4 top-1/2 -translate-y-1/2 fill-current text-2xl ${open && 'rotate-180'
                           }`} />
                       </NavLink>
@@ -188,7 +188,7 @@ const SidebarPegawai = ({ sidebarOpen, setSidebarOpen }) => {
                                 (isActive && '!text-white')
                               }
                             >
-                              Ubah Password
+                              Change Password
                             </NavLink>
                           </li>
                           <li>
@@ -209,7 +209,7 @@ const SidebarPegawai = ({ sidebarOpen, setSidebarOpen }) => {
                   )
                 }}
               </SidebarLinkGroup>
-              {/* <!-- Pengaturan Pegawai --> */}
+              {/* <!-- Settings Pegawai --> */}
             </ul>
           </div>
         </nav>

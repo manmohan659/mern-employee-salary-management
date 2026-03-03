@@ -162,12 +162,12 @@ const DataGaji = () => {
     };
     return (
         <Layout>
-            <Breadcrumb pageName='Data Gaji Pegawai' />
+            <Breadcrumb pageName='Salary Data Pegawai' />
 
             <div className='rounded-sm border border-stroke bg-white px-5 pt-2 pb-2.5 shadow-default dark:border-strokedark dark:bg-boxdark sm:px-7.5 xl:pb-10 mt-6'>
                 <div className='border-b border-stroke py-2 dark:border-strokedark'>
                     <h3 className='font-medium text-black dark:text-white'>
-                        Filter Data Gaji Pegawai
+                        Filter Salary Data Pegawai
                     </h3>
                 </div>
                 <form onSubmit={handleSearch}>
@@ -241,7 +241,7 @@ const DataGaji = () => {
                             return uniqueEntries;
                         }, []).map(data => (data.tahun !== 0 && data.bulan !== 0 &&
                             <h2 className="px-4 py-2 text-black dark:text-white" key={`${data.bulan}-${data.tahun}`}>
-                                Menampilkan Data Gaji Pegawai Bulan :
+                                Menampilkan Salary Data Pegawai Bulan :
                                 <span className="font-medium"> {data.bulan} </span>
                                 Tahun :
                                 <span className="font-medium"> {data.tahun}</span>
@@ -354,7 +354,7 @@ const DataGaji = () => {
                 <div className="flex justify-between items-center mt-4 flex-col md:flex-row md:justify-between">
                     <div className="flex items-center space-x-2">
                         <span className="text-gray-5 dark:text-gray-4 text-sm py-4">
-                            Menampilkan {startIndex + 1}-{Math.min(endIndex, filteredDataGaji.length)} data {filteredDataGaji.length} Data Gaji Pegawai
+                            Menampilkan {startIndex + 1}-{Math.min(endIndex, filteredDataGaji.length)} data {filteredDataGaji.length} Salary Data Pegawai
                         </span>
                     </div>
                     <div className="flex space-x-2 py-4">

@@ -13,7 +13,7 @@ app.get('/health', (_req, res) => {
 });
 
 app.get('/api/me', (req, res) => {
-    res.status(401).json({ msg: 'Mohon Login ke Akun Anda!' });
+    res.status(401).json({ msg: 'Please log in to your account!' });
 });
 
 describe('Health Endpoint', () => {

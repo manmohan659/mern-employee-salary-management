@@ -28,14 +28,14 @@ function LoginInput() {
     if (isError) {
       Swal.fire({
         icon: 'error',
-        title: 'Login Gagal',
+        title: 'Login Failed',
         text: message,
       }).then(() => {
       });
     } else if (isSuccess && user) {
       Swal.fire({
         icon: 'success',
-        title: 'Login Berhasil',
+        title: 'Login Successful',
         text: message,
         timer: 1500,
       }).then(() => {
@@ -56,7 +56,7 @@ function LoginInput() {
             onChange={(e) => setUsername(e.target.value)}
             autoComplete='off'
             required
-            placeholder='Masukkan username'
+            placeholder='Enter username'
             className='w-full rounded-lg border border-stroke bg-transparent py-4 pl-6 pr-10 outline-none focus:border-primary focus-visible:shadow-none dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary'
           />
           <FiUser className='absolute right-4 top-4 text-xl' />
@@ -73,7 +73,7 @@ function LoginInput() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
-            placeholder='Masukkan password'
+            placeholder='Enter password'
             className='w-full rounded-lg border border-stroke bg-transparent py-4 pl-6 pr-10 outline-none focus:border-primary focus-visible:shadow-none dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary'
           />
           <FiLock className='absolute right-4 top-4 text-xl' />
