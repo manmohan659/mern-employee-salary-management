@@ -10,7 +10,7 @@ import {
     DELETE_DATA_POTONGAN_FAILURE
 } from './dataPotonganActionTypes';
 
-const API_URL = '';
+const API_URL = '/api';
 
 export const getDataPotongan = () => {
     return async (dispatch) => {

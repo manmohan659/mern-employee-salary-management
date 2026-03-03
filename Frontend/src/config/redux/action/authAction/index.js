@@ -5,7 +5,7 @@ export const loginUser = createAsyncThunk(
   "user/loginUser",
   async (user, thunkAPI) => {
     try {
-      const response = await axios.post('/login', {
+      const response = await axios.post('/api/login', {
         username: user.username,
         password: user.password
       });
@@ -21,7 +21,7 @@ export const loginUser = createAsyncThunk(
 
 export const getMe = createAsyncThunk("user/getMe", async (_, thunkAPI) => {
   try {
-    const response = await axios.get('/me');
+    const response = await axios.get('/api/me');
     return response.data;
   } catch (error) {
     if (error.response) {

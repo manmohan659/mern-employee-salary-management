@@ -112,7 +112,7 @@ const DropdownProfil = () => {
           <div className='h-12 w-12 rounded-full overflow-hidden'>
             <img
               className='h-full w-full object-cover'
-              src={`/images/${dataPegawai.photo}`}
+              src={`/api/images/${dataPegawai.photo}`}
               alt='Profil'
             />
           </div>

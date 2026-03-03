@@ -1,4 +1,4 @@
-import { describe, it, expect, vi } from 'vitest';
+import { describe, it, expect } from 'vitest';
 import express from 'express';
 import request from 'supertest';
 
@@ -10,6 +10,10 @@ app.get('/health', (_req, res) => {
         timestamp: new Date().toISOString(),
         uptime: process.uptime(),
     });
+});
+
+app.get('/api/me', (req, res) => {
+    res.status(401).json({ msg: 'Mohon Login ke Akun Anda!' });
 });
 
 describe('Health Endpoint', () => {
@@ -27,8 +31,8 @@ describe('Health Endpoint', () => {
         expect(date.getTime()).not.toBeNaN();
     });
 
-    it('GET /unknown returns 404', async () => {
-        const res = await request(app).get('/unknown-route');
-        expect(res.status).toBe(404);
+    it('GET /api/me returns 401 without auth', async () => {
+        const res = await request(app).get('/api/me');
+        expect(res.status).toBe(401);
     });
 });

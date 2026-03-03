@@ -64,7 +64,7 @@ const DefaultDashboard = () => {
                         <div className="md:w-1/3 w-full px-4 py-4 flex justify-center md:justify-start">
                             <img
                                 className="rounded-xl h-80 w-full md:w-80 object-cover"
-                                src={`/images/${dataPegawai.photo}`}
+                                src={`/api/images/${dataPegawai.photo}`}
                                 alt="People"
                             />
                         </div>

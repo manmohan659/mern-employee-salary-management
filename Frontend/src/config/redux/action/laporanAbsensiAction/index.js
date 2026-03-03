@@ -21,7 +21,7 @@ export const clearLaporanAbsensi = () => ({
 export const fetchLaporanAbsensiByYear = (selectedYear, onDataFound) => async (dispatch) => {
     try {
         const response = await axios.get(
-            `/laporan/absensi/year/${selectedYear}`
+            `/api/laporan/absensi/year/${selectedYear}`
         );
         const data = response.data;
         dispatch(fetchLaporanAbsensiSuccess(data));
@@ -36,7 +36,7 @@ export const fetchLaporanAbsensiByYear = (selectedYear, onDataFound) => async (d
 export const fetchLaporanAbsensiByMonth = (selectedMonth, onDataFound) => async (dispatch) => {
     try {
         const response = await axios.get(
-            `/laporan/absensi/month/${selectedMonth}`
+            `/api/laporan/absensi/month/${selectedMonth}`
         );
         const data = response.data;
         dispatch(fetchLaporanAbsensiSuccess(data));

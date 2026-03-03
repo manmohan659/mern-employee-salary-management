@@ -16,6 +16,7 @@ const app = express();
 
 const sessionStore = SequelizeStore(session.Store);
 const store = new sessionStore({ db });
+store.sync();
 
 app.use(session({
     secret: process.env.SESS_SECRET || 'fallback-secret-dev',
@@ -48,7 +49,7 @@ app.get('/health', (_req, res) => {
     });
 });
 
-app.use(UserRoute);
-app.use(AuthRoute);
+app.use('/api', UserRoute);
+app.use('/api', AuthRoute);
 
 export default app;
