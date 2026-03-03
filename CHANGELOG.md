@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/manmohan659/mern-employee-salary-management/compare/v1.1.1...v1.1.2) (2026-03-03)
+
+
+### Bug Fixes
+
+* translate remaining About and Contact page text to English ([27906fe](https://github.com/manmohan659/mern-employee-salary-management/commit/27906fe7e762608c50909bac4757169898a4e5fe))
+
 ## [1.1.1](https://github.com/manmohan659/mern-employee-salary-management/compare/v1.1.0...v1.1.1) (2026-03-03)
 
 
