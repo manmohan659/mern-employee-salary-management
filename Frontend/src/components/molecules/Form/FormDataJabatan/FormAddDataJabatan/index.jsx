@@ -37,7 +37,7 @@ const FormAddDataJabatan = () => {
             .then((response) => {
                 Swal.fire({
                     icon: 'success',
-                    title: 'Berhasil',
+                    title: 'Success',
                     text: response.message,
                     showConfirmButton: false,
                     timer: 1500,
@@ -47,21 +47,21 @@ const FormAddDataJabatan = () => {
                 if (error.response && error.response.data && error.response.data.msg) {
                     Swal.fire({
                         icon: 'error',
-                        title: 'Gagal',
+                        title: 'Failed',
                         text: error.response.data.msg,
                         confirmButtonText: 'Ok',
                     });
                 } else if (error.message) {
                     Swal.fire({
                         icon: 'error',
-                        title: 'Gagal',
+                        title: 'Failed',
                         text: error.message,
                         confirmButtonText: 'Ok',
                     });
                 } else {
                     Swal.fire({
                         icon: 'error',
-                        title: 'Gagal',
+                        title: 'Failed',
                         text: 'Terjadi kesalahan',
                         confirmButtonText: 'Ok',
                     });
@@ -116,7 +116,7 @@ const FormAddDataJabatan = () => {
                                             value={namaJabatan}
                                             onChange={handleChange}
                                             required={true}
-                                            placeholder='Masukkan jabatan'
+                                            placeholder='Enter position'
                                             className='w-full rounded border-[1.5px] border-stroke bg-transparent py-3 px-5 font-medium outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary'
                                         />
                                     </div>

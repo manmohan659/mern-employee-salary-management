@@ -134,7 +134,7 @@ const AppRoutes = () => {
         element={<PrintPdfSlipGaji />}
       />
 
-      {/* Pengaturan Admin */}
+      {/* Admin Settings */}
       <Route
         path='/ubah-password'
         element={<UbahPasswordAdmin />}

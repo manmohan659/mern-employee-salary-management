@@ -31,7 +31,7 @@ const FormAddDataPotongan = () => {
             .then((response) => {
                 Swal.fire({
                     icon: 'success',
-                    title: 'Berhasil',
+                    title: 'Success',
                     text: response.message,
                     showConfirmButton: false,
                     timer: 1500,
@@ -41,21 +41,21 @@ const FormAddDataPotongan = () => {
                 if (error.response && error.response.data && error.response.data.msg) {
                     Swal.fire({
                         icon: 'error',
-                        title: 'Gagal',
+                        title: 'Failed',
                         text: error.response.data.msg,
                         confirmButtonText: 'Ok',
                     });
                 } else if (error.message) {
                     Swal.fire({
                         icon: 'error',
-                        title: 'Gagal',
+                        title: 'Failed',
                         text: error.message,
                         confirmButtonText: 'Ok',
                     });
                 } else {
                     Swal.fire({
                         icon: 'error',
-                        title: 'Gagal',
+                        title: 'Failed',
                         text: 'Terjadi kesalahan',
                         confirmButtonText: 'Ok',
                     });

@@ -59,7 +59,7 @@ const FormEditDataKehadiran = () => {
             setMsg(response.data.msg);
             Swal.fire({
                 icon: 'success',
-                title: 'Berhasil',
+                title: 'Success',
                 timer: 1500,
                 text: response.data.msg
             });
@@ -68,7 +68,7 @@ const FormEditDataKehadiran = () => {
             setMsg(error.response.data.msg);
             Swal.fire({
                 icon: 'error',
-                title: 'Gagal',
+                title: 'Failed',
                 text: error.response.data.msg
             });
         }
@@ -148,7 +148,7 @@ const FormEditDataKehadiran = () => {
                                             onChange={(e) => setNamaJabatan(e.target.value)}
                                             required={true}
                                             disabled
-                                            placeholder='Masukkan jabatan'
+                                            placeholder='Enter position'
                                             className='w-full rounded border-[1.5px] border-stroke bg-transparent py-3 px-5 font-medium outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary'
                                         />
                                     </div>

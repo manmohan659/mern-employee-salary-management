@@ -45,7 +45,7 @@ const FormEditDataPegawai = () => {
             setMsg(response.data.msg);
             Swal.fire({
                 icon: 'success',
-                title: 'Berhasil',
+                title: 'Success',
                 timer: 1500,
                 text: response.data.msg
             });
@@ -54,7 +54,7 @@ const FormEditDataPegawai = () => {
             setMsg(error.response.data.msg);
             Swal.fire({
                 icon: 'error',
-                title: 'Gagal',
+                title: 'Failed',
                 text: error.response.data.msg
             });
         }
@@ -121,7 +121,7 @@ const FormEditDataPegawai = () => {
                                             value={nik}
                                             onChange={(e) => setNik(e.target.value)}
                                             required
-                                            placeholder='Masukkan nomor nik'
+                                            placeholder='Enter NIK number'
                                             className='w-full rounded border-[1.5px] border-stroke bg-transparent py-3 px-5 font-medium outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary'
                                         />
                                     </div>
@@ -137,7 +137,7 @@ const FormEditDataPegawai = () => {
                                             value={namaPegawai}
                                             onChange={(e) => setNamaPegawai(e.target.value)}
                                             required={true}
-                                            placeholder='Masukkan nama lengkap'
+                                            placeholder='Enter full name'
                                             className='w-full rounded border-[1.5px] border-stroke bg-transparent py-3 px-5 font-medium outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary'
                                         />
                                     </div>
@@ -154,7 +154,7 @@ const FormEditDataPegawai = () => {
                                             value={username}
                                             onChange={(e) => setUsername(e.target.value)}
                                             required={true}
-                                            placeholder='Masukkan username'
+                                            placeholder='Enter username'
                                             className='w-full rounded border-[1.5px] border-stroke bg-transparent py-3 px-5 font-medium outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary'
                                         />
                                     </div>
@@ -194,7 +194,7 @@ const FormEditDataPegawai = () => {
                                             value={jabatan}
                                             onChange={(e) => setJabatan(e.target.value)}
                                             required={true}
-                                            placeholder='Masukkan jabatan'
+                                            placeholder='Enter position'
                                             className='w-full rounded border-[1.5px] border-stroke bg-transparent py-3 px-5 font-medium outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary'
                                         />
                                     </div>
@@ -228,8 +228,8 @@ const FormEditDataPegawai = () => {
                                                 required={true}
                                             >
                                                 <option value='' disabled={true}>Pilih status</option>
-                                                <option value='karyawan tetap'>Karyawan Tetap</option>
-                                                <option value='karyawan tidak tetap'>Karyawan Tidak Tetap</option>
+                                                <option value='karyawan tetap'>Permanent Employee</option>
+                                                <option value='karyawan tidak tetap'>Contract Employee</option>
                                             </select>
                                             <span className='absolute top-1/2 right-4 z-30 -translate-y-1/2 text-2xl'>
                                                 <MdOutlineKeyboardArrowDown />

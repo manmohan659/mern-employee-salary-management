@@ -19,8 +19,8 @@ const Banner = () => {
           
         </h1>
         <p className="mb-6 max-w-xl translate-y-[-60%] pt-8 text-center font-medium dark:text-white sm:translate-y-[-0%] md:text-left">
-          Sebuah platform perusahaan untuk mengelola proses penggajian karyawan
-          secara efisien dan terintegrasi melalui platform digital.
+          A company platform to manage employee payroll efficiently
+          and seamlessly through a digital platform.
         </p>
 
         <div className="grid translate-y-[-170%] justify-center sm:flex sm:translate-y-[-0%] sm:justify-start">

@@ -86,7 +86,7 @@ const FormAddDataPegawai = () => {
             .then((response) => {
                 Swal.fire({
                     icon: 'success',
-                    title: 'Berhasil',
+                    title: 'Success',
                     text: response.message,
                     showConfirmButton: false,
                     timer: 1500,
@@ -96,21 +96,21 @@ const FormAddDataPegawai = () => {
                 if (error.response && error.response.data && error.response.data.msg) {
                     Swal.fire({
                         icon: 'error',
-                        title: 'Gagal',
+                        title: 'Failed',
                         text: error.response.data.msg,
                         confirmButtonText: 'Ok',
                     });
                 } else if (error.message) {
                     Swal.fire({
                         icon: 'error',
-                        title: 'Gagal',
+                        title: 'Failed',
                         text: error.message,
                         confirmButtonText: 'Ok',
                     });
                 } else {
                     Swal.fire({
                         icon: 'error',
-                        title: 'Gagal',
+                        title: 'Failed',
                         text: 'Terjadi kesalahan',
                         confirmButtonText: 'Ok',
                     });
@@ -141,13 +141,13 @@ const FormAddDataPegawai = () => {
 
     return (
         <Layout>
-            <Breadcrumb pageName='Form Data Pegawai' />
+            <Breadcrumb pageName='Employee Form' />
             <div className='sm:grid-cols-2'>
                 <div className='flex flex-col gap-9'>
                     <div className='rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark'>
                         <div className='border-b border-stroke py-4 px-6.5 dark:border-strokedark'>
                             <h3 className='font-medium text-black dark:text-white'>
-                                Form Data Pegawai
+                                Employee Form
                             </h3>
                         </div>
                         <form onSubmit={submitDataPegawai}>
@@ -164,7 +164,7 @@ const FormAddDataPegawai = () => {
                                             value={nik}
                                             onChange={handleChange}
                                             required
-                                            placeholder='Masukkan nomor nik'
+                                            placeholder='Enter NIK number'
                                             className='w-full rounded border-[1.5px] border-stroke bg-transparent py-3 px-5 font-medium outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary'
                                         />
                                     </div>
@@ -180,7 +180,7 @@ const FormAddDataPegawai = () => {
                                             value={namaPegawai}
                                             onChange={handleChange}
                                             required={true}
-                                            placeholder='Masukkan nama lengkap'
+                                            placeholder='Enter full name'
                                             className='w-full rounded border-[1.5px] border-stroke bg-transparent py-3 px-5 font-medium outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary'
                                         />
                                     </div>
@@ -197,7 +197,7 @@ const FormAddDataPegawai = () => {
                                             value={username}
                                             onChange={handleChange}
                                             required={true}
-                                            placeholder='Masukkan username'
+                                            placeholder='Enter username'
                                             className='w-full rounded border-[1.5px] border-stroke bg-transparent py-3 px-5 font-medium outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary'
                                         />
                                     </div>
@@ -212,7 +212,7 @@ const FormAddDataPegawai = () => {
                                             value={password}
                                             onChange={handleChange}
                                             required={true}
-                                            placeholder='Masukkan password'
+                                            placeholder='Enter password'
                                             className='w-full rounded border-[1.5px] border-stroke bg-transparent py-3 px-5 font-medium outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary'
                                         />
                                     </div>
@@ -220,7 +220,7 @@ const FormAddDataPegawai = () => {
                                 <div className="mb-4.5 flex flex-col gap-6 xl:flex-row">
                                     <div className='w-full xl:w-1/2'>
                                         <label className='mb-2.5 block text-black dark:text-white'>
-                                            Konfirmasi Password <span className='text-meta-1'>*</span>
+                                            Confirm Password <span className='text-meta-1'>*</span>
                                         </label>
                                         <input
                                             type='password'
@@ -229,7 +229,7 @@ const FormAddDataPegawai = () => {
                                             value={confPassword}
                                             onChange={handleChange}
                                             required={true}
-                                            placeholder='Konfirmasi password'
+                                            placeholder='Confirm password'
                                             className='w-full rounded border-[1.5px] border-stroke bg-transparent py-3 px-5 font-medium outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary'
                                         />
                                     </div>
@@ -268,7 +268,7 @@ const FormAddDataPegawai = () => {
                                             value={jabatan}
                                             onChange={handleChange}
                                             required={true}
-                                            placeholder='Masukkan jabatan'
+                                            placeholder='Enter position'
                                             className='w-full rounded border-[1.5px] border-stroke bg-transparent py-3 px-5 font-medium outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:focus:border-primary'
                                         />
                                     </div>
@@ -302,8 +302,8 @@ const FormAddDataPegawai = () => {
                                                 required={true}
                                             >
                                                 <option value='' disabled={true}>Pilih status</option>
-                                                <option value='karyawan tetap'>Karyawan Tetap</option>
-                                                <option value='karyawan tidak tetap'>Karyawan Tidak Tetap</option>
+                                                <option value='karyawan tetap'>Permanent Employee</option>
+                                                <option value='karyawan tidak tetap'>Contract Employee</option>
                                             </select>
                                             <span className='absolute top-1/2 right-4 z-30 -translate-y-1/2 text-2xl'>
                                                 <MdOutlineKeyboardArrowDown />
