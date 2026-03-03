@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/manmohan659/mern-employee-salary-management/compare/v1.0.3...v1.1.0) (2026-03-03)
+
+
+### Features
+
+* translate UI from Indonesian to English ([91483e9](https://github.com/manmohan659/mern-employee-salary-management/commit/91483e939171ba144acb149f1ae8062e3da5dee0))
+
 ## [1.0.3](https://github.com/manmohan659/mern-employee-salary-management/compare/v1.0.2...v1.0.3) (2026-03-03)
 
 
