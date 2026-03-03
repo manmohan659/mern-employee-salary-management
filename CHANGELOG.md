@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/manmohan659/mern-employee-salary-management/compare/v1.0.2...v1.0.3) (2026-03-03)
+
+
+### Bug Fixes
+
+* add /api prefix to backend routes for proper SPA routing ([93fa703](https://github.com/manmohan659/mern-employee-salary-management/commit/93fa70395da7f7a99875615f796e8cf9971ba43a))
+
 ## [1.0.2](https://github.com/manmohan659/mern-employee-salary-management/compare/v1.0.1...v1.0.2) (2026-03-03)
 
 
