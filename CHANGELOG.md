@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/manmohan659/sipeka/compare/v1.3.0...v1.3.1) (2026-03-09)
+
+
+### Bug Fixes
+
+* improve login page logo alt text for accessibility ([6e98705](https://github.com/manmohan659/sipeka/commit/6e987059603c6ce7b6d718ac3818ccab100de152))
+
 # [1.3.0](https://github.com/manmohan659/sipeka/compare/v1.2.2...v1.3.0) (2026-03-09)
 
 
