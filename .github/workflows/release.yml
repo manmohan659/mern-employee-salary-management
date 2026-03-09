@@ -54,6 +54,30 @@ jobs:
             echo "released=false" >> $GITHUB_OUTPUT
           fi
 
+      - name: Configure AWS credentials
+        if: steps.semantic.outputs.released == 'true'
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-west-2
+
+      - name: Wait for images in ECR
+        if: steps.semantic.outputs.released == 'true'
+        run: |
+          echo "Waiting for build-push to finish pushing images to ECR..."
+          for i in $(seq 1 30); do
+            RESULT=$(aws ecr batch-get-image --repository-name sipeka-backend --image-ids imageTag=${{ github.sha }} --query 'images[0].imageId.imageTag' --output text 2>/dev/null)
+            if [ "$RESULT" = "${{ github.sha }}" ]; then
+              echo "Image found in ECR after $((i * 10)) seconds"
+              exit 0
+            fi
+            echo "Attempt $i/30 - image not yet in ECR, waiting 10s..."
+            sleep 10
+          done
+          echo "Timed out waiting for image in ECR"
+          exit 1
+
       - name: Trigger RC deployment
         if: steps.semantic.outputs.released == 'true'
         uses: peter-evans/repository-dispatch@v3
