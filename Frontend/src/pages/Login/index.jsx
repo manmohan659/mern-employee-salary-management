@@ -14,7 +14,7 @@ function Login() {
               <img
                 className="w-80"
                 src={LogoSipeka}
-                alt="Logo SiPeKa"
+                alt="SiPeKa Employee Payroll System Logo"
                 title="Logo SiPeKa"
               />
             </span>
