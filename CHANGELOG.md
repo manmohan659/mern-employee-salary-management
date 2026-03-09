@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/manmohan659/sipeka/compare/v1.1.3...v1.2.0) (2026-03-09)
+
+
+### Features
+
+* add DevOps blog post and architecture diagrams ([b13672f](https://github.com/manmohan659/sipeka/commit/b13672f1250c16d28341a117a013bfe348a7e21d))
+
 ## [1.1.3](https://github.com/manmohan659/sipeka/compare/v1.1.2...v1.1.3) (2026-03-09)
 
 
