@@ -5,7 +5,7 @@ const Footer = () => {
         <div>
             <footer className="text-sm text-center py-6 text-base-100 border-base-300 dark:bg-boxdark-2">
                 <div className="flex flex-col md:flex-row items-center justify-center mt-5 text-black dark:text-white">
-                    <p>&copy; Copyright 2023, SiPeKa. All Rights Reserved</p>
+                    <p>&copy; Copyright 2023 - 2026, SiPeKa. All Rights Reserved</p>
                 </div>
             </footer>
         </div>
