@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/manmohan659/sipeka/compare/v1.2.0...v1.2.1) (2026-03-09)
+
+
+### Bug Fixes
+
+* wait for ECR images before triggering RC deploy ([e278905](https://github.com/manmohan659/sipeka/commit/e278905525871a49af2f5eff65b50a7d17bb7272))
+
 # [1.2.0](https://github.com/manmohan659/sipeka/compare/v1.1.3...v1.2.0) (2026-03-09)
 
 
