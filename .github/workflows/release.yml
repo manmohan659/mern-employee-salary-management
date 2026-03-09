@@ -66,17 +66,23 @@ jobs:
         if: steps.semantic.outputs.released == 'true'
         run: |
           echo "Waiting for build-push to finish pushing images to ECR..."
-          for i in $(seq 1 30); do
-            RESULT=$(aws ecr batch-get-image --repository-name sipeka-backend --image-ids imageTag=${{ github.sha }} --query 'images[0].imageId.imageTag' --output text 2>/dev/null)
-            if [ "$RESULT" = "${{ github.sha }}" ]; then
-              echo "Image found in ECR after $((i * 10)) seconds"
-              exit 0
+          for REPO in sipeka-backend sipeka-frontend; do
+            echo "Checking for $REPO:${{ github.sha }}..."
+            for i in $(seq 1 30); do
+              RESULT=$(aws ecr batch-get-image --repository-name $REPO --image-ids imageTag=${{ github.sha }} --query 'images[0].imageId.imageTag' --output text 2>/dev/null)
+              if [ "$RESULT" = "${{ github.sha }}" ]; then
+                echo "$REPO image found in ECR after $((i * 10)) seconds"
+                break
+              fi
+              echo "Attempt $i/30 - $REPO not yet in ECR, waiting 10s..."
+              sleep 10
+            done
+            if [ "$RESULT" != "${{ github.sha }}" ]; then
+              echo "Timed out waiting for $REPO in ECR"
+              exit 1
             fi
-            echo "Attempt $i/30 - image not yet in ECR, waiting 10s..."
-            sleep 10
           done
-          echo "Timed out waiting for image in ECR"
-          exit 1
+          echo "Both images found in ECR!"
 
       - name: Trigger RC deployment
         if: steps.semantic.outputs.released == 'true'
