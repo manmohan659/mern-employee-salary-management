@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/manmohan659/sipeka/compare/v1.1.2...v1.1.3) (2026-03-09)
+
+
+### Bug Fixes
+
+* trigger RC deployment from semantic release ([44dfc4f](https://github.com/manmohan659/sipeka/commit/44dfc4fce369ff6c22937fc285b20f299508e4c9))
+
 ## [1.1.2](https://github.com/manmohan659/mern-employee-salary-management/compare/v1.1.1...v1.1.2) (2026-03-03)
 
 
