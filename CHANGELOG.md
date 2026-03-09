@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/manmohan659/sipeka/compare/v1.2.2...v1.3.0) (2026-03-09)
+
+
+### Features
+
+* update footer copyright year to 2026 ([30af106](https://github.com/manmohan659/sipeka/commit/30af10616878592425c1d522609ee6230c144cda))
+
 ## [1.2.2](https://github.com/manmohan659/sipeka/compare/v1.2.1...v1.2.2) (2026-03-09)
 
 
