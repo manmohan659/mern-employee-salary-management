@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/manmohan659/sipeka/compare/v1.2.1...v1.2.2) (2026-03-09)
+
+
+### Bug Fixes
+
+* wait for both backend and frontend images in ECR before RC deploy ([29d9d50](https://github.com/manmohan659/sipeka/commit/29d9d50464b9c84bb7010a97261ada080778cb47))
+
 ## [1.2.1](https://github.com/manmohan659/sipeka/compare/v1.2.0...v1.2.1) (2026-03-09)
 
 
