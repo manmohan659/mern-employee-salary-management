@@ -1,3 +1,10 @@
+## [1.7.2](https://github.com/manmohan659/sipeka/compare/v1.7.1...v1.7.2) (2026-03-11)
+
+
+### Bug Fixes
+
+* use standard nginx root master / non-root worker pattern ([ce74eb0](https://github.com/manmohan659/sipeka/commit/ce74eb00d8d6da9a5967047389d603f3d6781baf))
+
 ## [1.7.1](https://github.com/manmohan659/sipeka/compare/v1.7.0...v1.7.1) (2026-03-11)
 
 
