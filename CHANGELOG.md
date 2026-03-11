@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/manmohan659/sipeka/compare/v1.5.0...v1.5.1) (2026-03-11)
+
+
+### Bug Fixes
+
+* configure nginx paths for non-root operation ([4a6ae13](https://github.com/manmohan659/sipeka/commit/4a6ae132be0046b063b91c79bd856ad4ebd63a98))
+
 # [1.5.0](https://github.com/manmohan659/sipeka/compare/v1.4.0...v1.5.0) (2026-03-11)
 
 
