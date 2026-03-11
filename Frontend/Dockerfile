@@ -10,17 +10,13 @@ RUN npm run build
 
 FROM nginx:1.27-alpine
 
-RUN apk add --no-cache su-exec curl
+RUN apk add --no-cache curl
 
 COPY --from=build /app/dist /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY docker-entrypoint.sh /docker-entrypoint.sh
 
-RUN sed -i '/^user  nginx;/d' /etc/nginx/nginx.conf \
- && sed -i 's|/var/run/nginx.pid|/tmp/nginx.pid|; s|/run/nginx.pid|/tmp/nginx.pid|' /etc/nginx/nginx.conf \
- && mkdir -p /etc/nginx/templates \
- && chown -R nginx:nginx /usr/share/nginx/html /var/cache/nginx /var/log/nginx /etc/nginx/conf.d /etc/nginx/templates \
- && chmod -R 755 /var/cache/nginx \
+RUN mkdir -p /etc/nginx/templates \
  && chmod +x /docker-entrypoint.sh
 
 EXPOSE 8080
