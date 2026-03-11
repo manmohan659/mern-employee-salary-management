@@ -30,6 +30,10 @@ const DefaultDashboard = () => {
     return (
         <Layout>
             <Breadcrumb pageName='Dashboard' />
+            <div className="mb-6 rounded-lg bg-gradient-to-r from-blue-600 to-indigo-600 px-6 py-5 text-white shadow-lg">
+                <h2 className="text-2xl font-bold">Welcome to SiPeKa Dashboard</h2>
+                <p className="mt-1 text-blue-100">Manage payroll, attendance, and employee data all in one place.</p>
+            </div>
             {user && user.hak_akses === "admin" && (
                 <div className='grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 xl:grid-cols-4 2xl:gap-7.5'>
                     <CardOne />
