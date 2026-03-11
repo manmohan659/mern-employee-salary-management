@@ -1,3 +1,10 @@
+## [1.3.3](https://github.com/manmohan659/sipeka/compare/v1.3.2...v1.3.3) (2026-03-11)
+
+
+### Bug Fixes
+
+* run containers as non-root users ([cba2023](https://github.com/manmohan659/sipeka/commit/cba2023919934c431d360efd6252e5708aaf7111))
+
 ## [1.3.2](https://github.com/manmohan659/sipeka/compare/v1.3.1...v1.3.2) (2026-03-11)
 
 
