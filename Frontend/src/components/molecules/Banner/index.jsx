@@ -14,7 +14,7 @@ const Banner = () => {
         transition={{ duration: 1 }}
       >
         <h1 className="mb-0 translate-y-[-30%] text-center text-3xl font-semibold text-primary sm:translate-y-[-0%] md:text-left">
-          Employee Payroll System
+          SiPeKa - Employee Payroll System
           <br />
           
         </h1>
