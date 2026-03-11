@@ -1,6 +1,6 @@
 {
   "name": "sipeka-employee-salary-management",
-  "version": "1.3.3",
+  "version": "1.4.0",
   "private": true,
   "description": "SiPeKa - Employee Payroll Management System",
   "scripts": {

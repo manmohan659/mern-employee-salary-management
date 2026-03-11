@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/manmohan659/sipeka/compare/v1.3.3...v1.4.0) (2026-03-11)
+
+
+### Features
+
+* add workflow_dispatch trigger for nightly rebuild support ([598f984](https://github.com/manmohan659/sipeka/commit/598f9844306a42d85f475271d4e64ab192bd520b))
+
 ## [1.3.3](https://github.com/manmohan659/sipeka/compare/v1.3.2...v1.3.3) (2026-03-11)
 
 
