@@ -7,7 +7,9 @@ RUN npm ci --only=production
 
 COPY . .
 
-RUN mkdir -p public/images
+RUN mkdir -p public/images && chown -R node:node /app
+
+USER node
 
 EXPOSE 5000
 
