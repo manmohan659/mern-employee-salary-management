@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/manmohan659/sipeka/compare/v1.4.0...v1.5.0) (2026-03-11)
+
+
+### Features
+
+* add version display to About page ([0de172a](https://github.com/manmohan659/sipeka/commit/0de172a3761798f9b13ca5a61e0ce013bccb7f3a))
+
 # [1.4.0](https://github.com/manmohan659/sipeka/compare/v1.3.3...v1.4.0) (2026-03-11)
 
 
