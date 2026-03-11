@@ -1,3 +1,10 @@
+## [1.7.1](https://github.com/manmohan659/sipeka/compare/v1.7.0...v1.7.1) (2026-03-11)
+
+
+### Bug Fixes
+
+* add entrypoint to handle SSL cert permissions for non-root nginx ([3c519ea](https://github.com/manmohan659/sipeka/commit/3c519ea6b9627981c73e08afa60b9f9df5407094))
+
 # [1.7.0](https://github.com/manmohan659/sipeka/compare/v1.6.0...v1.7.0) (2026-03-11)
 
 
