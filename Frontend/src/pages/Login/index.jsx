@@ -20,7 +20,10 @@ function Login() {
             </span>
             <p className="text-black dark:text-white 2xl:px-20">
               Employee Payroll System
-              <br /> 
+              <br />
+              <span className="text-sm text-gray-500 dark:text-gray-400 mt-2 block">
+                Manage salaries, attendance, and employee data — all in one place.
+              </span> 
             </p>
             <img className="mt-15 inline-block" src={LoginImg} alt="Logo" />
           </div>
