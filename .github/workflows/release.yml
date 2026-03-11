@@ -42,7 +42,7 @@ jobs:
           GIT_COMMITTER_NAME: github-actions[bot]
           GIT_COMMITTER_EMAIL: github-actions[bot]@users.noreply.github.com
         run: |
-          npx semantic-release 2>&1 | tee release-output.txt
+          npx semantic-release  | tee release-output.txt
           if grep -q "Published release" release-output.txt; then
             VERSION=$(grep "next release version" release-output.txt | grep -oP '\d+\.\d+\.\d+' | tail -1)
             if [ -z "$VERSION" ]; then
@@ -54,41 +54,11 @@ jobs:
             echo "released=false" >> $GITHUB_OUTPUT
           fi
 
-      - name: Configure AWS credentials
-        if: steps.semantic.outputs.released == 'true'
-        uses: aws-actions/configure-aws-credentials@v4
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: us-west-2
-
-      - name: Wait for images in ECR
-        if: steps.semantic.outputs.released == 'true'
+      - name: Log release result
         run: |
-          echo "Waiting for build-push to finish pushing images to ECR..."
-          for REPO in sipeka-backend sipeka-frontend; do
-            echo "Checking for $REPO:${{ github.sha }}..."
-            for i in $(seq 1 30); do
-              RESULT=$(aws ecr batch-get-image --repository-name $REPO --image-ids imageTag=${{ github.sha }} --query 'images[0].imageId.imageTag' --output text 2>/dev/null)
-              if [ "$RESULT" = "${{ github.sha }}" ]; then
-                echo "$REPO image found in ECR after $((i * 10)) seconds"
-                break
-              fi
-              echo "Attempt $i/30 - $REPO not yet in ECR, waiting 10s..."
-              sleep 10
-            done
-            if [ "$RESULT" != "${{ github.sha }}" ]; then
-              echo "Timed out waiting for $REPO in ECR"
-              exit 1
-            fi
-          done
-          echo "Both images found in ECR!"
-
-      - name: Trigger RC deployment
-        if: steps.semantic.outputs.released == 'true'
-        uses: peter-evans/repository-dispatch@v3
-        with:
-          token: ${{ secrets.INFRA_REPO_PAT }}
-          repository: ${{ github.repository_owner }}/sipeka-infra
-          event-type: deploy-rc
-          client-payload: '{"rc_tag": "${{ steps.semantic.outputs.version }}", "source_tag": "${{ github.sha }}"}'
+          if [ "${{ steps.semantic.outputs.released }}" = "true" ]; then
+            echo "Published ${{ steps.semantic.outputs.version }}"
+            echo "RC promotion will be triggered after QA smoke tests pass"
+          else
+            echo "No release created for this commit"
+          fi
