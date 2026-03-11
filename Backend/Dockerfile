@@ -2,18 +2,14 @@ FROM node:20-alpine
 
 WORKDIR /app
 
-# Run as non-root for security (principle of least privilege)
-RUN addgroup -g 1000 appgroup && \
-    adduser -u 1000 -G appgroup -s /bin/sh -D appuser
-
 COPY package*.json ./
 RUN npm ci --only=production
 
 COPY . .
 
-RUN mkdir -p public/images && chown -R appuser:appgroup /app
+RUN mkdir -p public/images && chown -R node:node /app
 
-USER appuser
+USER node
 
 EXPOSE 5000
 
