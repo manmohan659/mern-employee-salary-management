@@ -31,6 +31,9 @@ const About = () => {
                                 About <span className="text-primary">Us</span>
                             </h1>
                             <BottomLine />
+                            <p className="text-center text-sm mt-3 font-mono tracking-wide text-primary bg-primary/10 inline-block mx-auto px-4 py-1 rounded-full">
+                                Version: v1.4.0
+                            </p>
                         </motion.div>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
                             <motion.div
