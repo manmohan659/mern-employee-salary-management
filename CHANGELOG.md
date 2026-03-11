@@ -1,3 +1,10 @@
+## [1.3.2](https://github.com/manmohan659/sipeka/compare/v1.3.1...v1.3.2) (2026-03-11)
+
+
+### Bug Fixes
+
+* decouple release.yml from RC deployment, add .dockerignore ([fab275c](https://github.com/manmohan659/sipeka/commit/fab275c45fbceebb031bafcbef43cc3fc47d0720))
+
 ## [1.3.1](https://github.com/manmohan659/sipeka/compare/v1.3.0...v1.3.1) (2026-03-09)
 
 
