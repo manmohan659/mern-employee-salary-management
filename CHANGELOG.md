@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/manmohan659/sipeka/compare/v1.6.0...v1.7.0) (2026-03-11)
+
+
+### Features
+
+* add welcome tagline to login page ([795efce](https://github.com/manmohan659/sipeka/commit/795efce587a68cd36d5dcff9e0a41ea7fabf791f))
+
 # [1.6.0](https://github.com/manmohan659/sipeka/compare/v1.5.2...v1.6.0) (2026-03-11)
 
 
