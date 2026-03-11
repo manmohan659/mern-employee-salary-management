@@ -3,6 +3,12 @@ name: Build & Push to ECR
 on:
   push:
     branches: [main]
+  workflow_dispatch:
+    inputs:
+      skip_infra_trigger:
+        description: 'Skip triggering infra deployment (used by nightly rebuild)'
+        type: boolean
+        default: false
 
 env:
   AWS_REGION: us-west-2
@@ -73,7 +79,7 @@ jobs:
           docker push $REGISTRY/$ECR_FRONTEND:latest
 
       - name: Trigger infra repo deployment
-        if: success()
+        if: success() && inputs.skip_infra_trigger != true
         uses: peter-evans/repository-dispatch@v3
         with:
           token: ${{ secrets.INFRA_REPO_PAT }}
