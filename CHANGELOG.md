@@ -1,3 +1,10 @@
+# [1.9.0](https://github.com/manmohan659/sipeka/compare/v1.8.0...v1.9.0) (2026-03-12)
+
+
+### Features
+
+* add CI/CD tagline to landing page banner ([04888ce](https://github.com/manmohan659/sipeka/commit/04888ce1c2afdb6a10568b972cfa3272d49f701c))
+
 # [1.8.0](https://github.com/manmohan659/sipeka/compare/v1.7.2...v1.8.0) (2026-03-12)
 
 
