@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/manmohan659/sipeka/compare/v1.7.2...v1.8.0) (2026-03-12)
+
+
+### Features
+
+* add pipeline badge to footer copyright ([33086d9](https://github.com/manmohan659/sipeka/commit/33086d980548dbe121a87bcc858345ce0e59175c))
+
 ## [1.7.2](https://github.com/manmohan659/sipeka/compare/v1.7.1...v1.7.2) (2026-03-11)
 
 
