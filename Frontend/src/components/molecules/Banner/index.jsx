@@ -20,7 +20,7 @@ const Banner = () => {
         </h1>
         <p className="mb-6 max-w-xl translate-y-[-60%] pt-8 text-center font-medium dark:text-white sm:translate-y-[-0%] md:text-left">
           A company platform to manage employee payroll efficiently
-          and seamlessly through a digital platform.
+          and seamlessly through a digital platform — now with automated CI/CD.
         </p>
 
         <div className="grid translate-y-[-170%] justify-center sm:flex sm:translate-y-[-0%] sm:justify-start">
